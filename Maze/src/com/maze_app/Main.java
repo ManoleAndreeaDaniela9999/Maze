@@ -4,8 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        System.out.println("MazeApp Opened");
+        System.out.println();
         MazeFrame mazeFrame = MazeFactory.initMaze();
-        System.out.println("MazeAppClosed");
     }
 }

@@ -7,6 +7,7 @@ public class MazeFrame extends JFrame {
 
     Point cellSize;
 
+
     public MazeFrame(){
         this.setTitle("Graf menu");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

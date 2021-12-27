@@ -1,10 +1,10 @@
 package com.maze_app;
 
 
-import javax.swing.plaf.ButtonUI;
+import javax.swing.*;
 import java.awt.*;
 
-public class Wall extends Button implements Cell {
+public class Wall extends JButton implements Cell {
 
     int m_sizeX, m_sizeY;
 
@@ -13,8 +13,6 @@ public class Wall extends Button implements Cell {
         this.setBackground(Color.black);
         this.setFocusable(false);
     }
-
-    ;
 
     @Override
     public CellType getType() {
@@ -25,5 +23,10 @@ public class Wall extends Button implements Cell {
         m_sizeX = sizeX;
         m_sizeY = m_sizeY;
         this.setSize(sizeX, sizeY);
+    }
+
+    @Override
+    public String toString() {
+        return "0";
     }
 }
