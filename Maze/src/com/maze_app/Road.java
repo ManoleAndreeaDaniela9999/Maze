@@ -23,4 +23,8 @@ public class Road extends JButton implements Cell{
     public String toString() {
         return "1";
     }
+
+    public void MarkAsSolution(){
+        this.setBackground(Color.green);
+    }
 }

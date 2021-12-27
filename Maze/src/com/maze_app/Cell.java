@@ -11,4 +11,5 @@ public interface Cell {
     }
     //void setType(CellType cellType);
     CellType getType();
+    void MarkAsSolution();
 }

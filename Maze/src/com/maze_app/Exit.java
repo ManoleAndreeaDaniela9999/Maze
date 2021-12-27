@@ -20,6 +20,11 @@ public class Exit extends JButton implements Cell {
     }
 
     @Override
+    public void MarkAsSolution() {
+
+    }
+
+    @Override
     public String toString() {
         return "3";
     }
