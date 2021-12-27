@@ -4,10 +4,14 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Road extends JButton implements Cell{
-    public void Road() {
+
+
+    public Road() {
+        this.setText("r");
         this.setSize(10, 10);
         this.setBackground(Color.white);
         this.setFocusable(false);
+        this.setEnabled(false);
     }
 
     @Override

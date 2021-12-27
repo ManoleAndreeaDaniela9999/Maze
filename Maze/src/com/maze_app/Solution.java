@@ -3,12 +3,12 @@ package com.maze_app;
 import javax.swing.*;
 import java.awt.*;
 
-public class Entrance extends JButton implements Cell {
+public class Solution extends JButton implements Cell {
 
-    public Entrance() {
-        this.setText("entrance");
-        this.setSize(10, 10);
-        this.setBackground(Color.blue);
+    public Solution() {
+        this.setText("s");
+        this.setSize(10, 10); // ????
+        this.setBackground(Color.green);
         this.setForeground(Color.white);
         this.setFocusable(false);
         this.setEnabled(false);
@@ -16,11 +16,11 @@ public class Entrance extends JButton implements Cell {
 
     @Override
     public CellType getType() {
-        return CellType.ENTRANCE;
+        return CellType.SOLUTION;
     }
 
     @Override
     public String toString() {
-        return "2";
+        return "4";
     }
 }

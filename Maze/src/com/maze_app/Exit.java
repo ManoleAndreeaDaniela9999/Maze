@@ -5,10 +5,13 @@ import java.awt.*;
 
 public class Exit extends JButton implements Cell {
 
-    public void Exit() {
+    public Exit() {
+        this.setText("exit");
         this.setSize(10, 10);
         this.setBackground(Color.red);
+        this.setForeground(Color.black);
         this.setFocusable(false);
+        this.setEnabled(false);
     }
 
     @Override

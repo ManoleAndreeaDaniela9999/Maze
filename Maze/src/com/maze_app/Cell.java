@@ -6,9 +6,9 @@ public interface Cell {
         WALL,
         ROAD,
         ENTRANCE,
-        EXIT
+        EXIT,
+        SOLUTION
     }
     //void setType(CellType cellType);
     CellType getType();
-    void setSize(int sizeX, int sizeY);
 }

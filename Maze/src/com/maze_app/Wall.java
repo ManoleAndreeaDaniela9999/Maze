@@ -6,23 +6,18 @@ import java.awt.*;
 
 public class Wall extends JButton implements Cell {
 
-    int m_sizeX, m_sizeY;
-
-    public void Wall() {
+    public Wall() {
+        this.setText("w");
         this.setSize(10, 10); // ????
         this.setBackground(Color.black);
+        this.setForeground(Color.white);
         this.setFocusable(false);
+        this.setEnabled(false);
     }
 
     @Override
     public CellType getType() {
         return CellType.WALL;
-    }
-
-    public void setSize(int sizeX, int sizeY) {
-        m_sizeX = sizeX;
-        m_sizeY = m_sizeY;
-        this.setSize(sizeX, sizeY);
     }
 
     @Override
