@@ -26,12 +26,10 @@ public class MazeFrame extends JFrame {
             e.printStackTrace();
         }
         this.setLayout(new GridLayout(m_maze.length, m_maze[0].length));
-        BuildMaze();
         //TODO: STEP 2 :APPLY bf ALG
-//        this.add(new Road());
-//        this.add(new Wall());
-//        this.add(new Entrance());
-//        this.add(new Exit());
+
+        //TODO: STEP 3 : JUST BUILD MATRIX
+        BuildMaze();
         this.setVisible(true);
     }
 
@@ -52,6 +50,9 @@ public class MazeFrame extends JFrame {
                     }
                     case EXIT -> {
                         this.add(new Exit());
+                    }
+                    case SOLUTION -> {
+                        this.add(new Solution());
                     }
                 }
             }
