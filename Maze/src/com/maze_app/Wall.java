@@ -4,7 +4,7 @@ package com.maze_app;
 import javax.swing.*;
 import java.awt.*;
 
-public class Wall extends JButton implements Cell {
+public class Wall extends Cell {
 
     public Wall() {
         this.setText("w");
@@ -18,11 +18,6 @@ public class Wall extends JButton implements Cell {
     @Override
     public CellType getType() {
         return CellType.WALL;
-    }
-
-    @Override
-    public void MarkAsSolution() {
-
     }
 
     @Override

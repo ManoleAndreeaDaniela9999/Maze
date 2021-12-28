@@ -3,7 +3,7 @@ package com.maze_app;
 import javax.swing.*;
 import java.awt.*;
 
-public class Exit extends JButton implements Cell {
+public class Exit extends Cell {
 
     public Exit() {
         this.setText("exit");
@@ -17,11 +17,6 @@ public class Exit extends JButton implements Cell {
     @Override
     public CellType getType() {
         return CellType.EXIT;
-    }
-
-    @Override
-    public void MarkAsSolution() {
-
     }
 
     @Override

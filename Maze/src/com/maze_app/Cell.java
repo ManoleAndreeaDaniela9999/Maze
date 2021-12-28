@@ -1,15 +1,14 @@
 package com.maze_app;
 
-public interface Cell {
+import javax.swing.*;
+
+public abstract class Cell extends JButton {
 
     enum CellType{
         WALL,
         ROAD,
         ENTRANCE,
-        EXIT,
-        SOLUTION
+        EXIT
     }
-    //void setType(CellType cellType);
-    CellType getType();
-    void MarkAsSolution();
+    abstract CellType getType();
 }

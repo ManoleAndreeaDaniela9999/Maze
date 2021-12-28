@@ -10,7 +10,7 @@ import java.util.Vector;
 
 public class Utils {
 
-    static Cell.CellType[][] readMazeMatrix() throws IOException {
+    static Cell[][] readMazeMatrix() throws IOException {
         FileReader fileReader = new FileReader("src/com/maze_app/maze.txt");
         Scanner input = new Scanner(fileReader);
         // pre-read in the number of rows/columns
@@ -28,23 +28,23 @@ public class Utils {
         input.close();
         fileReader.close();
 
-        Cell.CellType[][] maze = new Cell.CellType[rows][columns];
+        Cell[][] maze = new Cell[rows][columns];
 
 
         for (int i = 0; i < rows; ++i) {
             for (int j = 0; j < columns; ++j) {
                 switch (mazeEncoding.elementAt(i).charAt(j)) {
                     default:
-                        maze[i][j] = Cell.CellType.WALL;
+                        maze[i][j] = new Wall();
                         break;
                     case '1':
-                        maze[i][j] = Cell.CellType.ROAD;
+                        maze[i][j] = new Road();
                         break;
                     case '2':
-                        maze[i][j] = Cell.CellType.ENTRANCE;
+                        maze[i][j] = new Entrance();
                         break;
                     case '3':
-                        maze[i][j] = Cell.CellType.EXIT;
+                        maze[i][j] = new Exit();
                         break;
                 }
             }

@@ -8,7 +8,7 @@ import java.io.IOException;
 public class MazeFrame extends JFrame {
 
     Point cellSize;
-    private Cell.CellType[][] m_maze;
+    private Cell[][] m_maze;
 
     public MazeFrame(){
         this.setTitle("Graf menu");
@@ -34,27 +34,10 @@ public class MazeFrame extends JFrame {
     }
 
     private void BuildMaze() {
-        for(Cell.CellType[] eachRow : m_maze){
-            for(Cell.CellType cell : eachRow)
+        for(Cell[] eachRow : m_maze){
+            for(Cell cell : eachRow)
             {
-                switch(cell){
-
-                    case WALL -> {
-                        this.add(new Wall());
-                    }
-                    case ROAD -> {
-                        this.add(new Road());
-                    }
-                    case ENTRANCE -> {
-                        this.add(new Entrance());
-                    }
-                    case EXIT -> {
-                        this.add(new Exit());
-                    }
-                    case SOLUTION -> {
-                        this.add(new Solution());
-                    }
-                }
+                this.add(cell);
             }
         }
     }

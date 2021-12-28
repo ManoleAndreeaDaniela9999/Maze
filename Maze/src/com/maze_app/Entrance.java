@@ -3,7 +3,7 @@ package com.maze_app;
 import javax.swing.*;
 import java.awt.*;
 
-public class Entrance extends JButton implements Cell {
+public class Entrance extends Cell {
 
     public Entrance() {
         this.setText("entrance");
@@ -17,11 +17,6 @@ public class Entrance extends JButton implements Cell {
     @Override
     public CellType getType() {
         return CellType.ENTRANCE;
-    }
-
-    @Override
-    public void MarkAsSolution() {
-        
     }
 
     @Override
