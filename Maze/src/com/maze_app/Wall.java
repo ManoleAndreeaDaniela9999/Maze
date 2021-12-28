@@ -6,9 +6,7 @@ import java.awt.*;
 
 public class Wall extends Cell {
 
-    public int x , y;
-
-    public Wall(int x , int y) {
+    public Wall(int x, int y) {
         this.setText("w");
         this.setSize(10, 10); // ????
         this.setBackground(Color.black);
@@ -22,6 +20,25 @@ public class Wall extends Cell {
     @Override
     public CellType getType() {
         return CellType.WALL;
+    }
+
+    @Override
+    void setPreviousRoad(Cell previousRoad) {
+
+    }
+
+    @Override
+    Cell getPreviousRoad() {
+        return null;
+    }
+
+    @Override
+    void setVisited(boolean wasVisited) {
+    }
+
+    @Override
+    boolean wasVisited() {
+        return true;
     }
 
     @Override

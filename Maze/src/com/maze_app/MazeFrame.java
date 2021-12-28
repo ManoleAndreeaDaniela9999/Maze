@@ -31,7 +31,7 @@ public class MazeFrame extends JFrame {
         }
         this.setLayout(new GridLayout(m_maze.length, m_maze[0].length));
         //TODO: STEP 2 :APPLY bf ALG
-        BFAlg.setUp(m_entrance[0], m_exits);
+        BFAlg.setUp(m_entrance[0], m_exits,m_maze.length,m_maze[0].length);
         BFAlg.start(m_maze); //TODO: work here
         //STEP 3 : JUST BUILD MATRIX
         BuildMaze();

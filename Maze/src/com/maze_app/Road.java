@@ -5,15 +5,11 @@ import java.awt.*;
 
 public class Road extends Cell {
 
-    private Road m_prevRoad;
-    private boolean m_wasVisited;
-    public int x, y;
-
-    public class Arrows {
-        public String up = "↑";
-        public String right = "→";
-        public String down = "↓";
-        public String left = "←";
+    public static class Arrows {
+        public static String up = "↑";
+        public static String right = "→";
+        public static String down = "↓";
+        public static String left = "←";
 
     }
 
@@ -34,16 +30,22 @@ public class Road extends Cell {
     }
 
     @Override
+    void setPreviousRoad(Cell previousRoad) {
+        m_prevRoad = previousRoad;
+    }
+
+    @Override
+    Cell getPreviousRoad() {
+        return null;
+    }
+
+    @Override
     public String toString() {
         return "1";
     }
 
     public void markAsSolution() {
         this.setBackground(Color.green);
-    }
-
-    public void setPreviousRoad(Road previousRoad) {
-        m_prevRoad = previousRoad;
     }
 
     public void setVisited(boolean wasVisited) {

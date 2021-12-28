@@ -5,9 +5,9 @@ import java.awt.*;
 
 public class Exit extends Cell {
 
-    public int x , y;
+    private boolean m_wasVisited;
 
-    public Exit(int x , int y) {
+    public Exit(int x, int y) {
         this.setText("exit");
         this.setSize(10, 10);
         this.setBackground(Color.red);
@@ -16,6 +16,7 @@ public class Exit extends Cell {
         this.setEnabled(false);
         this.x = x;
         this.y = y;
+        m_wasVisited = false;
     }
 
     @Override
@@ -24,7 +25,25 @@ public class Exit extends Cell {
     }
 
     @Override
+    void setPreviousRoad(Cell previousRoad) {
+        m_prevRoad = previousRoad;
+    }
+
+    @Override
+    Cell getPreviousRoad() {
+        return null;
+    }
+
+    @Override
     public String toString() {
         return "3";
+    }
+
+    public boolean wasVisited() {
+        return m_wasVisited;
+    }
+
+    public void setVisited(boolean wasVisited) {
+        m_wasVisited = wasVisited;
     }
 }

@@ -5,9 +5,7 @@ import java.awt.*;
 
 public class Entrance extends Cell {
 
-    public int x , y;
-
-    public Entrance(int x , int y) {
+    public Entrance(int x, int y) {
         this.setText("entrance");
         this.setSize(10, 10);
         this.setBackground(Color.blue);
@@ -18,13 +16,34 @@ public class Entrance extends Cell {
         this.y = y;
     }
 
-    public Entrance(Entrance e){
+    public Entrance(Entrance e) {
         this.x = e.x;
         this.y = e.y;
     }
+
     @Override
     public CellType getType() {
         return CellType.ENTRANCE;
+    }
+
+    @Override
+    void setPreviousRoad(Cell previousRoad) {
+
+    }
+
+    @Override
+    Cell getPreviousRoad() {
+        return null;
+    }
+
+    @Override
+    void setVisited(boolean wasVisited) {
+        m_wasVisited = wasVisited;
+    }
+
+    @Override
+    boolean wasVisited() {
+        return true;
     }
 
     @Override
