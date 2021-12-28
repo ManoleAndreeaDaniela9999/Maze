@@ -1,7 +1,6 @@
 package com.maze_app;
 
 import java.awt.*;
-import java.util.Deque;
 import java.util.LinkedList;
 import java.util.Vector;
 
@@ -36,9 +35,19 @@ public class BFAlg {
             for (Cell eachNeighbour: neighbours){
                 searchQ.addLast(eachNeighbour);
             }
+            if(searchQ.getFirst().getType() == Cell.CellType.EXIT)
+                ReconstructPath(searchQ.getFirst());
             searchQ.removeFirst();
         }
         return true;
+    }
+
+    private static void ReconstructPath(Cell last) {
+        Cell current = last.getPreviousRoad();
+        while(current.getPreviousRoad()!=null){
+            current.setBackground(Color.green);
+            current = current.getPreviousRoad();
+        }
     }
 
     public static Vector<Cell> getNeighbours(Cell cell,Cell[][] grid) {
@@ -86,7 +95,7 @@ public class BFAlg {
                 }
                 a.setBackground(Color.pink);
                 a.setPreviousRoad(cell);
-            };
+            }
         }
         return neighbours;
     }

@@ -31,7 +31,7 @@ public class Exit extends Cell {
 
     @Override
     Cell getPreviousRoad() {
-        return null;
+        return m_prevRoad;
     }
 
     @Override

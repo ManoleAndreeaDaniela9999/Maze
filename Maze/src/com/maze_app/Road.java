@@ -36,7 +36,7 @@ public class Road extends Cell {
 
     @Override
     Cell getPreviousRoad() {
-        return null;
+        return m_prevRoad;
     }
 
     @Override
@@ -44,9 +44,7 @@ public class Road extends Cell {
         return "1";
     }
 
-    public void markAsSolution() {
-        this.setBackground(Color.green);
-    }
+    //public void markAsSolution() {this.setBackground(Color.green); }
 
     public void setVisited(boolean wasVisited) {
         m_wasVisited = wasVisited;

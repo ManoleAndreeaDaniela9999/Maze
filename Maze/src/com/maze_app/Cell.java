@@ -22,5 +22,6 @@ public abstract class Cell extends JButton {
     abstract Cell getPreviousRoad();
 
     abstract void setVisited(boolean wasVisited);
+
     abstract boolean wasVisited();
 }
